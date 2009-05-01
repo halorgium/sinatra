@@ -743,6 +743,13 @@ module Sinatra
         route('HEAD', path, opts, &block)
       end
 
+      def any(path, opts={}, &bk)
+        get(path, opts, &bk)
+        put(path, opts, &bk)
+        post(path, opts, &bk)
+        delete(path, opts, &bk)
+      end
+
       def put(path, opts={}, &bk);    route 'PUT',    path, opts, &bk end
       def post(path, opts={}, &bk);   route 'POST',   path, opts, &bk end
       def delete(path, opts={}, &bk); route 'DELETE', path, opts, &bk end
