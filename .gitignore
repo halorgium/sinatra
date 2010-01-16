@@ -7,3 +7,6 @@
 .#*
 \#*
 .emacs*
+
+bin
+vendor/gems
